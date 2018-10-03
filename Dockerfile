@@ -47,6 +47,7 @@ RUN sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 0xB19
     sudo apt-get update && \
     sudo apt-get install zulu-8
 
+# TODO - set as appropriate via ARG
 ENV JAVA_HOME=/usr/lib/jvm/zulu-8-amd64
 
 # resin-sync will always sync to /usr/src/app, so code needs to be here.
