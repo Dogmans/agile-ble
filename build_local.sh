@@ -1,0 +1,1 @@
+docker build --build-arg BASEIMAGE_BUILD=resin/amd64-debian -t agile-ble .

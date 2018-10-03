@@ -49,7 +49,9 @@ cd $BUILD/tinyb
 mkdir -p build
 cd build
 
+#extra_includes=$(dirname $(find / -name jni.h))
 # echo "add_compile_options(-std=c++11)" >> ../CMakeLists.txt
+# export JAVA_HOME=/usr/lib/jvm/zulu-8-amd64
 cmake .. -DCMAKE_CXX_FLAGS="-std=c++11" -DCMAKE_INSTALL_PREFIX=$DEPS -DBUILDJAVA=ON
 make tinyb
 make install
