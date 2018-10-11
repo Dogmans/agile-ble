@@ -60,12 +60,9 @@ COPY agile-dbus-java-interface agile-dbus-java-interface
 RUN CC=clang CXX=clang++ CMAKE_C_COMPILER=clang CMAKE_CXX_COMPILER=clang++ \
 scripts/install-agile-interfaces.sh $APATH/deps
 
-RUN apt-get update && apt-get install --no-install-recommends -y \
+RUN apt-get update && apt-get install --no-install-recommends -y apt-transport-https \
     libbluetooth-dev \
     libudev-dev \
-    && apt-get clean && rm -rf /var/lib/apt/lists/*
-
-RUN apt-get update && apt-get install --no-install-recommends -y \
     libglib2.0-0=2.42.1-1+b1 \
     libglib2.0-dev=2.42.1-1+b1 \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
