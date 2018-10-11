@@ -63,8 +63,8 @@ scripts/install-agile-interfaces.sh $APATH/deps
 RUN apt-get update && apt-get install --no-install-recommends -y apt-transport-https \
     libbluetooth-dev \
     libudev-dev \
-    libglib2.0-0=2.42.1-1+b1 \
-    libglib2.0-dev=2.42.1-1+b1 \
+    libglib2.0-0 \
+    libglib2.0-dev \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 RUN PKG_CONFIG_PATH=/usr/local/lib/pkgconfig:/usr/lib/pkgconfig CC=clang CXX=clang++ CMAKE_C_COMPILER=clang CMAKE_CXX_COMPILER=clang++ \
